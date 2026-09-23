@@ -3,8 +3,8 @@
 sudo dnf upgrade -y
 sudo dnf install -y @development-tools
 sudo dnf install -y flatpack
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.gnu.emacs
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+sudo flatpak install flathub org.gnu.emacs
 
 [ -x ~/.local/bin/mise ] || curl -fsSL https://mise.run | sh
 mkdir -p ~/.config/mise
