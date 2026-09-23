@@ -25,7 +25,7 @@ eval "$(~/.local/bin/mise activate bash)"
 sudo dnf install -y emacs
 
 # init.el extras (language servers + debuggers)
-curl -fsSL https://raw.githubusercontent.com/chubbyhippo/virtualbox-fedora/refs/heads/main/init-el-extras.sh | /usr/bin/env sh
+curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-fedora-settings/refs/heads/main/init-el-extras.sh | /usr/bin/env sh
 
 rpm -q jet-brains-mono-nerd-fonts >/dev/null 2>&1 || {
     sudo dnf copr enable -y aquacash5/nerd-fonts
