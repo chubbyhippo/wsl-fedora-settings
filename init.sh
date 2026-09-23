@@ -1,16 +1,5 @@
 #!/bin/sh
 
-zscaler_cert() {
-    for cert in /media/sf_*/zscaler-root-ca.crt /mnt/*/zscaler-root-ca.crt; do
-        [ -f "$cert" ] && { printf '%s' "$cert"; return 0; }
-    done
-    return 1
-}
-
-if zscaler_cert >/dev/null; then
-    curl -fsSL https://raw.githubusercontent.com/chubbyhippo/virtualbox-fedora/refs/heads/main/add-certs.sh | sh
-fi
-
 sudo dnf upgrade -y
 sudo dnf install -y @development-tools
 
