@@ -16,7 +16,7 @@ sudo dnf install -y @development-tools
 
 [ -x ~/.local/bin/mise ] || curl -fsSL https://mise.run | sh
 mkdir -p ~/.config/mise
-[ -f ~/.config/mise/config.toml ] || curl -fsSL https://raw.githubusercontent.com/chubbyhippo/virtualbox-fedora/refs/heads/main/mise.toml -o ~/.config/mise/config.toml
+[ -f ~/.config/mise/config.toml ] || curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-fedora-settings/refs/heads/main/mise.toml -o ~/.config/mise/config.toml
 ~/.local/bin/mise install --yes
 eval "$(~/.local/bin/mise activate bash)"
 
