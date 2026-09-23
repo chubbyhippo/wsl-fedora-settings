@@ -2,6 +2,8 @@
 
 sudo dnf upgrade -y
 sudo dnf install -y @development-tools
+sudo dnf install -y flatpack
+flatpak install flathub org.gnu.emacs
 
 [ -x ~/.local/bin/mise ] || curl -fsSL https://mise.run | sh
 mkdir -p ~/.config/mise
@@ -10,8 +12,6 @@ mkdir -p ~/.config/mise
 eval "$(~/.local/bin/mise activate bash)"
 
 [ -f ~/.bashrc ] && ! grep -qsF 'mise activate bash' ~/.bashrc && echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
-
-sudo dnf install -y emacs
 
 # init.el extras (language servers + debuggers)
 curl -fsSL https://raw.githubusercontent.com/chubbyhippo/wsl-fedora-settings/refs/heads/main/init-el-extras.sh | /usr/bin/env sh
