@@ -10,5 +10,8 @@ wsl --list --online
 wsl --install FedoraLinux-44
 ```
 ```powershell
+wsl --set-default FedoraLinux-44
+```
+```powershell
 wsl --unregister FedoraLinux-44
 ```
