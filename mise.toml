@@ -1,3 +1,4 @@
+[tools]
 java = "lts"
 google-java-format = "latest"
 clojure = "latest"
